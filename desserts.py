@@ -55,13 +55,13 @@ class Cupcake:
     @staticmethod
     def scale_recipe(ingredients, amount):
       """return a tuple with (ingredient_name, ingredient_qty) in a list"""
-
+      #Ingredients its a list of tuples 
       #check quantity variable and define and run it again
       #multiplying the ingredient quantity with the amount of cupcackes we want to make 
       ingredient_list = []
 
 
-      #We want to loop throuh ingredients and quantity in our list ingredients 
+      #We want to loop throuh ingredients and quantity in our list ingredients ß
       for (ingredient, quantity) in ingredients:
           #multiply my ingredient and quantity to the amount 
           final = (ingredient, quantity * amount)
@@ -82,6 +82,12 @@ class Cupcake:
       #the 
       else:
         return cls.cache[name]  
+
+class Brownie(Cupcake):
+
+    def __init__(self, name, price): 
+      super().__init__(self, name, "chocolate", price)
+
 
 if __name__ == '__main__':
     import doctest
